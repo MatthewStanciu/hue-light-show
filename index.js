@@ -1,6 +1,5 @@
 require('dotenv').config()
 const huejay = require('huejay')
-const http = require('http')
 
 const client = new huejay.Client({
   host: process.env.HOST,
@@ -25,5 +24,3 @@ setInterval(() => {
 		})
 	})
 }, 3000)
-
-http.createServer().listen(3000)
