@@ -1,0 +1,15 @@
+{
+  "name": "hue-light-show",
+  "version": "1.0.0",
+  "description": "A psychedelic light show using Philips Hue light bulbs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "MatthewStanciu",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "huejay": "^1.9.0"
+  }
+}
