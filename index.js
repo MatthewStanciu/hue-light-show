@@ -13,7 +13,7 @@ function updateLight(lightId) {
 		light.saturation = Math.floor((Math.random() * 204) + 50)
 		light.transitionTime = Math.floor((Math.random() * 2) + 3) // between 3 and 5
 		
-		return client.lights.save(light)
+		return client.lights.save(light) // //
 	})
 }
 
