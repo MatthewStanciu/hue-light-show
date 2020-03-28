@@ -9,9 +9,9 @@ const client = new huejay.Client({
 
 function updateLight(lightId) {
 	client.lights.getById(lightId).then(light => {
-		light.brightness = Math.floor((Math.random() * 254) + 50)
+		light.brightness = Math.floor((Math.random() * 204) + 50) // random number between 50 and 254
 		light.xy = [(Math.random() * 0.7), (Math.random() * 0.8)]
-		light.saturation = Math.floor((Math.random() * 254) + 50)
+		light.saturation = Math.floor((Math.random() * 204) + 50)
 		light.transitionTime = Math.floor((Math.random() * 5) + 3)
 		
 		return client.lights.save(light)
