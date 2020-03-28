@@ -7,20 +7,20 @@ const client = new huejay.Client({
 })
 
 function updateLight(lightId) {
-	client.lights.getById(lightId).then(light => {
-		light.brightness = Math.floor((Math.random() * 204) + 50)
-		light.xy = [(Math.random() * 0.7), (Math.random() * 0.8)]
-		light.saturation = Math.floor((Math.random() * 204) + 50)
-		light.transitionTime = Math.floor((Math.random() * 2) + 3)
+  client.lights.getById(lightId).then(light => {
+    light.brightness = Math.floor((Math.random() * 204) + 50)
+    light.xy = [(Math.random() * 0.7), (Math.random() * 0.8)]
+    light.saturation = Math.floor((Math.random() * 204) + 50)
+    light.transitionTime = Math.floor((Math.random() * 2) + 3)
 
-		return client.lights.save(light)
-	})
+    return client.lights.save(light)
+  })
 }
 
 setInterval(() => {
-	client.lights.getAll().then(lights => {
-		lights.forEach(light => {
-			if (light >= 3) updateLight(light)
-		})
-	})
+  client.lights.getAll().then(lights => {
+    lights.forEach(light => {
+      if (light >= 3) updateLight(light)
+    })
+  })
 }, 3000)
